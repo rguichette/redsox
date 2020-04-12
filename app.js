@@ -1,10 +1,9 @@
 const express = require('express');
 const app = express();
+const auth = require('./routes/auth')
 
-app.get('/', (req, res) => {
-return 	res.send("done")
-});
 
+app.use('/api/auth', auth)
 
 
 
